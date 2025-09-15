@@ -3,7 +3,7 @@ import { createSession } from "./session";
 import { deleteSession } from "./session";
 export async  function  loginUser(username:string, password:string){
 
-    let response = await fetch("http://localhost:3001/auth/login", {
+    let response = await fetch(process.env.API_URL+"/auth/login", {
         method: "POST",
         headers: {
             "Content-Type": "application/json"

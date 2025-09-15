@@ -18,7 +18,7 @@ export async function addProject(projectName: string, projectDescription: string
     
 
     console.log(formData)
-    let response = await fetch(process.env.APP_URL+"/projects/add", {
+    let response = await fetch(process.env.API_URL+"/projects/add", {
         method: "POST",
         body:formData
     })
@@ -42,7 +42,7 @@ export async function grabProject(Id:number){
 }
 
 export async function getAllProjects(){
-    const projects = await fetch(process.env.APP_URL+"/projects/"+process.env.APP_SECRET)
+    const projects = await fetch(process.env.API_URL+"/projects/"+process.env.APP_SECRET)
     .then(response => {
         return response.json()
     })

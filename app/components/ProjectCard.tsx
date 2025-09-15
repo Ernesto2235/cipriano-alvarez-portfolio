@@ -58,7 +58,7 @@ export default function ProjectCard({imgSrc,projectName,projectDate = "",project
         <li className="flex text-[#756056] bg-[#e9e3e1] shadow-sm p-3 h-2/3  w-1/4 rounded-md justify-center items-center flex-col hover:cursor-pointer" onClick={()=>{
             setOpenModal(!openModal)
         }}>
-            <Image className="h-2/3 w-full shadow-sm rounded-md" width={400} height={400} src={"http://localhost:3001/images/"+imgSrc} alt={projectName}/>
+            <Image className="h-2/3 w-full shadow-sm rounded-md" width={400} height={400} src={process.env.API_URL+"/images/"+imgSrc} alt={projectName}/>
             <div className="w-full">
                 <p className="text-3xl">{projectName}</p>
                 <div className="flex flex-row w-full items-end h-4/5  text-lg">
